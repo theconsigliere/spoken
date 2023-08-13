@@ -1,0 +1,56 @@
+.spoken-circle {
+  position: relative;
+  aspect-ratio: 1/1;
+  width: 9.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin-bottom: 0;
+
+  &.spoken-circle--medium {
+    width: 9.5rem;
+  }
+
+  &.spoken-circle--large {
+    width: 12.5rem;
+  }
+
+  &:hover {
+    .spoken-circle--circle {
+      transform: rotate(360deg);
+    }
+
+    .spoken-circle--text :is(svg) {
+      transform: rotate(-360deg);
+    }
+  }
+}
+
+.spoken-circle--circle {
+  width: 65%;
+  height: 65%;
+  transition: transform 0.9s cubic-bezier(0.45, 0.36, 0, 1.41);
+  background: transparent;
+
+  :is(svg) {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.spoken-circle--text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background: transparent;
+
+  :is(svg) {
+    width: 100%;
+    height: 100%;
+    transition: transform 1.35s cubic-bezier(0.42, 0, 0.04, 0.98);
+  }
+}

@@ -1,0 +1,26 @@
+<head>
+    {{-- <title><?php wp_title(''); ?></title> --}}
+  
+    <meta charset='<?php bloginfo('charset'); ?>'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <link rel="apple-touch-icon" sizes="180x180" href="<?php echo get_theme_file_uri(); ?>/resources/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="<?php echo get_theme_file_uri(); ?>/resources/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="<?php echo get_theme_file_uri(); ?>/resources/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="<?php echo get_theme_file_uri(); ?>/resources/images/favicon/site.webmanifest" crossorigin="use-credentials">
+    <link rel="mask-icon" href="<?php echo get_theme_file_uri(); ?>/resources/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+  <!-- Google Tag Manager -->
+  {{-- <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-K24SVNN');</script> --}}
+  <!-- End Google Tag Manager -->
+
+  @php wp_head() @endphp
+
+</head>

@@ -1,0 +1,57 @@
+{
+  "name": "ravorona/sage",
+  "version": "4.0.4",
+  "description": "Wordpress theme based on Sage starter theme using Vite",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Maxwell Kirwin",
+      "email": "hello@maxwellkirwin.co.uk"
+    }
+  ],
+  "support": {
+    "issues": "https://maxwellkirwin.co.uk"
+  },
+  "keywords": [
+    "wordpress"
+  ],
+  "autoload": {
+    "psr-4": {
+      "App\\": "app/"
+    }
+  },
+  "require": {
+    "php": "^8.0",
+    "log1x/sage-svg": "^1.1",
+    "roots/acorn": "^3.1"
+  },
+  "require-dev": {
+    "squizlabs/php_codesniffer": "^3.7.1"
+  },
+  "suggest": {
+    "log1x/sage-directives": "A collection of useful Blade directives for WordPress and Sage (^1.0).",
+    "log1x/sage-svg": "A useful SVG directive for inlining SVG's within Blade views (^1.0)."
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "preferred-install": "dist",
+    "sort-packages": true
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "scripts": {
+    "lint": [
+      "phpcs --extensions=php --standard=PSR12 app"
+    ]
+  },
+  "extra": {
+    "acorn": {
+      "providers": [
+        "App\\Providers\\ThemeServiceProvider"
+      ]
+    }
+  },
+  "post-autoload-dump": [
+    "Roots\\Acorn\\ComposerScripts::postAutoloadDump"
+  ]
+}

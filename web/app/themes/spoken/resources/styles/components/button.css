@@ -1,0 +1,44 @@
+.btn {
+  font-family: var(--font-headline);
+  background: transparent;
+  border: 0.01rem solid var(--color-white);
+  color: var(--color-white);
+  text-align: center;
+  position: relative;
+  padding: 0.75rem 2.5rem;
+  overflow: hidden;
+  display: block;
+  width: fit-content;
+
+  &:hover {
+    .btn__wiper {
+      transform: translateY(0%);
+    }
+  }
+
+  &.btn--block {
+    background: var(--color-teracotta);
+
+    .btn__wiper {
+      background: var(--color-light-green);
+    }
+  }
+}
+
+.btn__wiper {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  background: var(--color-teracotta);
+  transform: translateY(101%);
+  transition: transform 0.3s cubic-bezier(0.49, 0.19, 0.12, 1.25);
+}
+.btn__text {
+  position: relative;
+  z-index: 2;
+  text-transform: uppercase;
+  letter-spacing: 0.125rem;
+}

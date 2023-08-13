@@ -1,0 +1,27 @@
+.preloader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background: var(--color-teracotta);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 101;
+  visibility: visible;
+  overflow: hidden;
+}
+
+.preloader__background {
+  background: #000000c7;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 99;
+  visibility: visible;
+  overflow: hidden;
+}

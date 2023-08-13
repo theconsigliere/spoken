@@ -1,0 +1,14 @@
+{
+    "plugins": {
+        "autoprefixer": {},
+        "postcss-custom-media": {},
+        "postcss-inline-svg": {
+            "paths": [
+                "./resources/svg"
+            ],
+            "removeStroke": true,
+            "removeFill": true
+        },
+        "postcss-nesting": {}
+    }
+}

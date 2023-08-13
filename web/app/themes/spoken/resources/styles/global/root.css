@@ -1,0 +1,38 @@
+:root {
+  /* --font-body: 'Circular Std';
+    --font-headline: 'PP Formula Condensed'; */
+  --font-body: 'Cormorant Garamond', serif;
+  --font-headline: 'Mendl Sans', sans-serif;
+  --font-cursive: 'DM Serif Display', serif;
+  --font-weight-light: 300;
+  --font-weight-mid: 500;
+  --font-weight-bold: 700;
+  --color-gold: #d9a75f;
+  --color-dark-green: #203d35;
+  --color-slate: #e2dccf;
+  --color-orange: #e59a46;
+  --color-light-green: #325a51;
+  --color-green: #203d35;
+  --color-grey: #707070;
+  --color-biege: #e2dccf;
+  --color-dark: #1c1e22;
+  --color-teracotta: #b85735;
+  --color-black: #000;
+  --color-white: #fff;
+  --color-dusk: #e4dace;
+  --screen-xs: 0;
+  --screen-sm: 576px;
+  --screen-md: 768px;
+  --screen-lg: 992px;
+  --screen-xl: 1200px;
+  --screen-xxl: 1440px;
+  --screen-3xl: 1920px;
+  --screen-4xl: 2560px;
+}
+
+.dusk {
+  color: var(--color-dusk);
+}
+
+@import url('https://use.typekit.net/izs8rsr.css');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');

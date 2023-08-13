@@ -1,0 +1,19 @@
+/** Global styles */
+@import 'global/root';
+@import 'global/typography';
+@import 'global/global';
+@import 'global/wp-classes.css';
+@import 'global/header';
+@import 'global/footer';
+@import 'global/mobile-menu';
+@import 'global/helpers';
+@import 'global/preloader';
+@import 'global/fade';
+@import 'global/privacy-policy';
+
+/* Hero styles */
+@import 'page-builder/hero';
+@import 'page-builder/blocks';
+
+@import 'components/button';
+@import 'components/logo-spinner';
