@@ -6,8 +6,8 @@ DEVSITE="https://spoken.test"
 STAGDIR="forge@142.93.43.90:/home/forge/spoken.maxwellkirwin.co.uk/web/app/uploads/"
 STAGSITE="https://spoken.maxwellkirwin.co.uk"
 
-PRODDIR="forge@xx.xx.xx:/home/forge/www.spokenexmouth.com/web/app/uploads/"
-PRODSITE="http://www"
+# PRODDIR="forge@xx.xx.xx:/home/forge/www.spokenexmouth.com/web/app/uploads/"
+# PRODSITE="http://www"
 
 FROM=$1
 TO=$2
@@ -24,7 +24,7 @@ read -r -p "Would you really like to reset the $TO database and sync $DIR from $
 
 if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]; then
   cd ../ &&
-  wp "@$TO" db export &&
+  # wp "@$TO" db export &&
   wp "@$FROM" db export - | wp "@$TO" db import - &&
   wp "@$TO" search-replace "$FROMSITE" "$TOSITE" --all-tables &&
   rsync -az --progress "$FROMDIR" "$TODIR"
