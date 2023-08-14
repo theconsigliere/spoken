@@ -4,6 +4,6 @@ server:
 @development:
   path: web/wp
 @staging:
-  ssh: forge@167.99.197.207:/home/forge/spoken.maxwellkirwin.co.uk
+  ssh: forge@167.99.197.207/home/forge/spoken.maxwellkirwin.co.uk
 @production:
   ssh: forge@xx.xx.xx.xx/home/forge/www.example.com 

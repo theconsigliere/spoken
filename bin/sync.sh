@@ -3,7 +3,7 @@
 DEVDIR="web/app/uploads/"
 DEVSITE="https://spoken.test"
 
-STAGDIR="forge@167.99.197.207:/home/forge/spoken.maxwellkirwin.co.uk/web/app/uploads/"
+STAGDIR="forge@167.99.197.207/home/forge/spoken.maxwellkirwin.co.uk/web/app/uploads/"
 STAGSITE="https://spoken.maxwellkirwin.co.uk"
 
 # PRODDIR="forge@xx.xx.xx:/home/forge/www.spokenexmouth.com/web/app/uploads/"
