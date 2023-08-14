@@ -29,6 +29,3 @@ if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]; then
   wp "@$TO" search-replace "$FROMSITE" "$TOSITE" --all-tables &&
   rsync -az --progress "$FROMDIR" "$TODIR"
 fi
-
-
-wp db export db-backup.sql --socket="localhost:/tmp/mysql_3306.sock"
