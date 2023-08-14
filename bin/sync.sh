@@ -24,7 +24,7 @@ read -r -p "Would you really like to reset the $TO database and sync $DIR from $
 
 if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]; then
   cd ../ &&
-  # wp "@$TO" db export &&
+  wp "@$TO" db export &&
   wp "@$FROM" db export - | wp "@$TO" db import - &&
   wp "@$TO" search-replace "$FROMSITE" "$TOSITE" --all-tables &&
   rsync -az --progress "$FROMDIR" "$TODIR"
