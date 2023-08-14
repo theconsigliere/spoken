@@ -3,7 +3,7 @@
 DEVDIR="web/app/uploads/"
 DEVSITE="https://spoken.test"
 
-STAGDIR="forge@142.93.43.90:/home/forge/spoken.maxwellkirwin.co.uk/web/app/uploads/"
+STAGDIR="forge@167.99.197.207:/home/forge/spoken.maxwellkirwin.co.uk/web/app/uploads/"
 STAGSITE="https://spoken.maxwellkirwin.co.uk"
 
 # PRODDIR="forge@xx.xx.xx:/home/forge/www.spokenexmouth.com/web/app/uploads/"
@@ -29,3 +29,6 @@ if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]; then
   wp "@$TO" search-replace "$FROMSITE" "$TOSITE" --all-tables &&
   rsync -az --progress "$FROMDIR" "$TODIR"
 fi
+
+
+wp db export db-backup.sql --socket="localhost:/tmp/mysql_3306.sock"
