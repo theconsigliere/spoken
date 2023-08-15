@@ -52,8 +52,8 @@ export function splitText(text: HTMLElement) {
         start: 'top center',
         end: 'center center',
         scrub: 1,
-        invalidateOnRefresh: true,
-        markers: true
+        invalidateOnRefresh: true
+        // markers: true
       },
       defaults: {
         stagger: 0.15,
