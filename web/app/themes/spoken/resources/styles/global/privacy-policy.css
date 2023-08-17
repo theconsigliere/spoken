@@ -78,7 +78,12 @@
   grid-column: 1 / span 12;
   margin: 5ren 0;
   border-bottom: 1px solid var(--color-dusk);
-  padding: 0 0 2.5rem;
+  padding: 0 0 1.5rem;
+  margin-bottom: 1rem;
+
+  @media (min-width: 992px) {
+    padding: 0 0 2.5rem;
+  }
 }
 
 .TemplatePrivacyPolicy__content {
@@ -101,5 +106,9 @@
   @media (min-width: 1440px) {
     margin-bottom: 1.75rem;
     font-size: 1.75rem;
+  }
+
+  :is(p, h5) {
+    margin-bottom: 2rem;
   }
 }

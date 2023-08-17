@@ -42,7 +42,6 @@ export function headerMobile(el: HTMLElement) {
       )
       .fromTo(underlines, { xPercent: 0 }, { duration: 0.15, xPercent: -100, stagger: 0.1, ease: 'power2.out' }, 0)
 
-    mobileLogo.classList.remove('js-active')
     if (headerState) el.setAttribute('data-state', headerState)
     headerState = null
 
@@ -65,7 +64,6 @@ export function headerMobile(el: HTMLElement) {
       window.lenis ? window.lenis.stop() : (body.style.overflow = 'hidden')
       headerState = el.getAttribute('data-state')
       el.setAttribute('data-state', 'transparent')
-      mobileLogo.classList.add('js-active')
 
       animationTl
         .fromTo(

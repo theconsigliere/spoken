@@ -73,7 +73,7 @@ figure {
 .main {
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
+  margin: 2rem auto 0;
 
   @media (min-width: 769px) {
     margin: 0 auto;
@@ -611,6 +611,15 @@ table td {
   }
 }
 
+#ot-reservation-widget .ot-dtp-picker.wide .ot-dtp-picker-form {
+  height: fit-content;
+  flex-direction: column;
+  @media (min-width: 992px) {
+    height: 48px;
+    flex-direction: row;
+  }
+}
+
 .swiper-pagination-clickable .swiper-pagination-bullet {
   cursor: pointer;
   opacity: 1;
@@ -626,6 +635,15 @@ table td {
 .swiper-button-prev {
   &::after {
     color: var(--color-dusk);
+  }
+}
+
+#ot-reservation-widget .ot-dtp-picker .ot-dtp-picker-selector,
+#ot-reservation-widget .ot-dtp-picker .ot-dtp-picker-button {
+  width: 100%;
+
+  @media (min-width: 992px) {
+    width: 200px;
   }
 }
 

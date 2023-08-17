@@ -51,6 +51,9 @@
 
 .hero__main-description {
   color: var(--color-white);
+  text-wrap: balance;
+  max-width: 95%;
+  text-align: center;
 }
 
 .hero__main-titleSection {
@@ -110,6 +113,7 @@
 }
 
 .hero__page-header-description {
+  text-align: center;
 }
 
 .hero__page-header-buttonGroup {

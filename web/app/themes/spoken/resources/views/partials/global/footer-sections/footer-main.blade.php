@@ -6,9 +6,9 @@
                 <div class="footer__main-opening-times">
                     @if ($openingTimes['title'])
                     <div class="footer__main-titleGroup">
-                        <h6 class="footer__main-title sub-headline">
+                        <h5 class="footer__main-title sub-headline">
                             {{ $openingTimes['title'] }}
-                        </h6>
+                        </h5>
                     </div>
                     @endif
 
@@ -45,9 +45,9 @@
             <div class="footer__main-contactDetails">
                 @if ($contactDetails['title'])
                 <div class="footer__main-titleGroup">
-                    <h6 class="footer__main-title sub-headline">
+                    <h5 class="footer__main-title sub-headline">
                         {{ $contactDetails['title'] }}
-                    </h6>
+                    </h5>
                 </div>
                 @endif
 

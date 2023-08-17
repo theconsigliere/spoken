@@ -26,7 +26,7 @@
         <div class="workWithUs__content">
 
             @if ($title)
-              <h3 class='workWithUs__title headline h5'>
+              <h3 class='workWithUs__title headline'>
                 {{ $title }}
               </h3>
             @endif

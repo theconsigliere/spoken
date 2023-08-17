@@ -24,7 +24,7 @@ export function footerGallery(element: HTMLElement) {
         spaceBetween: 10
       },
       992: {
-        slidesPerView: 4.5,
+        slidesPerView: 6,
         spaceBetween: 20
       }
     }

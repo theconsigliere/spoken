@@ -49,6 +49,10 @@
   display: flex;
   gap: 1.5rem;
   width: 135%;
+
+  .swiper-slide {
+    max-height: 55rem;
+  }
 }
 
 .footer {
@@ -74,6 +78,7 @@
 
 .footer__main-contactDetails {
   grid-column: 5 / span 3;
+  margin-top: 2.5rem;
 }
 
 .footer__detail {
@@ -118,6 +123,11 @@
 
 .footer__main-mapGroup {
   grid-column: 8 / span 5;
+  margin-top: 2rem;
+
+  @media (min-width: 992px) {
+    margin-top: 0;
+  }
 
   :is(img) {
     width: 100%;
@@ -160,9 +170,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+
+  @media (min-width: 992px) {
+    flex-direction: row;
+  }
 }
 
 .footer__bottom-logoGroup {
+  margin: 2rem 0;
+
+  @media (min-width: 1920px) {
+    margin: 0;
+  }
 }
 
 .footer__bottom-links {
@@ -175,6 +195,11 @@
   flex: 1;
   display: flex;
   justify-content: flex-start;
+  margin-bottom: 2rem;
+
+  @media (min-width: 992px) {
+    margin-bottom: 0;
+  }
 }
 
 .footer__bottom-link {
