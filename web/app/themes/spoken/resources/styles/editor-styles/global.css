@@ -1,0 +1,19 @@
+html {
+  box-sizing: border-box;
+  -webkit-overflow-scrolling: auto;
+  font-size: 62.5%;
+  /* Stops scrolling immediately */
+  overscroll-behavior-y: none;
+  scroll-behavior: initial;
+}
+
+.acfe-flexible-placeholder.-preview {
+  .container,
+  .large-container {
+    max-width: 90%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1rem;
+    margin: 0 auto;
+  }
+}

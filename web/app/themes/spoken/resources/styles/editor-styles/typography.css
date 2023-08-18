@@ -1,0 +1,39 @@
+.acfe-flexible-placeholder.-preview {
+  :is(h1),
+  :is(h2),
+  :is(h3),
+  :is(h4),
+  :is(h5),
+  :is(h6) {
+    font-family: var(--font-headline);
+    color: var(--color-white);
+  }
+
+  :is(a),
+  :is(p),
+  :is(li) {
+    font-family: var(--font-body);
+    color: var(--color-white);
+  }
+
+  .cursive {
+    font-family: var(--font-cursive);
+  }
+
+  .headline {
+    font-family: var(--font-headline);
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+  }
+
+  .sub-headline {
+    font-family: var(--font-headline);
+    text-transform: uppercase;
+    letter-spacing: 0.25rem;
+  }
+
+  .btn {
+    font-family: var(--font-headline);
+    text-decoration: none;
+  }
+}
