@@ -8,5 +8,10 @@
         {!! the_flexible('page_builder') !!}
       </div>
     @endif
+
+    @if ($getSubscribe === 'show')
+      @include('partials.global.subscribe')
+    @endif
+    
   @endwhile
 @endsection

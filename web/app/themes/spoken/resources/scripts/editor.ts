@@ -22,3 +22,4 @@
  */
 
 import '@styles/editor.css'
+import '@styles/login.css'

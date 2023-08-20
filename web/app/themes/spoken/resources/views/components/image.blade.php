@@ -29,6 +29,7 @@ Example usage
 {{-- Lazyload --}}
   <img
     alt="{{ $image['alt'] ?? '' }}"
+    loading=”lazy”
     data-sizes="{{ $sizes }}"
     data-src="{{ $image['sizes']['large'] ?? null }}" 
     data-srcset="{{ isset($image['id']) ? wp_get_attachment_image_srcset($image['id'], 'large') : null }}" 

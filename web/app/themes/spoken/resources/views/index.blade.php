@@ -7,6 +7,9 @@
       <div class="page-builder">
         {!! the_flexible('page_builder') !!}
       </div>
+
     @endif
+
+    
   @endwhile
 @endsection
