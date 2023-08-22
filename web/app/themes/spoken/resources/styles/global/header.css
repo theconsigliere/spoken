@@ -88,6 +88,7 @@
   color: var(--color-white);
   font-family: var(--font-headline);
   text-transform: uppercase;
+  font-weight: var(--font-weight-bold);
   letter-spacing: 0.125rem;
   opacity: 0.85;
   transition: opacity 0.25s ease-in-out;

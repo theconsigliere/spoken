@@ -43,6 +43,7 @@
   text-transform: uppercase;
   letter-spacing: 0.5rem;
   text-align: center;
+  font-family: var(--font-alt-headline);
 }
 
 .hero__main-span {
@@ -80,6 +81,7 @@
   background: var(--color-black);
   height: 60vh;
   position: relative;
+  overflow: hidden;
 }
 
 .hero__page-header-image {

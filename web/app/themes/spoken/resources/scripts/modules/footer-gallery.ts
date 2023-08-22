@@ -1,7 +1,7 @@
 import Swiper, { Autoplay } from 'swiper'
+// configure Swiper to use modules
 Swiper.use([Autoplay])
 import 'swiper/css'
-import 'swiper/css/effect-fade'
 
 export function footerGallery(element: HTMLElement) {
   const slider = element.querySelector('.js-swiper') as HTMLElement
@@ -10,21 +10,23 @@ export function footerGallery(element: HTMLElement) {
     // Optional parameters
     direction: 'horizontal',
     loop: true,
-    slidesPerView: 2.5,
+    centerInsufficientSlides: true,
+    centeredSlidesBounds: true,
+    grabCursor: true,
+    slidesPerView: 2,
     spaceBetween: 10,
     // If we need pagination
     autoplay: {
-      delay: 2500,
-      disableOnInteraction: true
+      delay: 1500
     },
-    speed: 1000,
+    speed: 2000,
     breakpoints: {
       768: {
         slidesPerView: 3.5,
         spaceBetween: 10
       },
       992: {
-        slidesPerView: 6,
+        slidesPerView: 4.5,
         spaceBetween: 20
       }
     }

@@ -23,8 +23,9 @@
   text-align: center;
   text-wrap: balance;
   line-height: 1.75;
+  max-width: 80%;
+  margin: 0 auto;
 }
-
 .introSection__content {
   grid-column: 2 / span 10;
   margin-top: 3rem;
@@ -45,18 +46,32 @@
 .introSection__text-content-button,
 .galleryTextSection__button {
   margin-top: 2rem;
+  margin-left: 0;
 
   @media (min-width: 992px) {
     margin-top: 0;
+    margin-left: 5%;
+  }
+}
+
+.introSection__text-content-paragraph {
+  text-wrap: balance;
+  margin-left: 0;
+
+  @media (min-width: 1200px) {
+    max-width: 80%;
+    margin-left: 5%;
   }
 }
 
 .introSection__text-content {
   flex: 0 0 100%;
   order: 2;
+  margin-top: 0;
 
   @media (min-width: 992px) {
     flex: 1;
+    margin-top: 2.5rem;
   }
 }
 .introSection__image-content {
@@ -199,13 +214,15 @@ Image side Text side */
 }
 
 .imageSideTextSide__text-inner:has(.imageSideTextSide__pattern) {
-  justify-content: flex-end;
+  justify-content: space-between;
 
   .imageSideTextSide__text-content {
     margin-bottom: 5rem;
+    margin-top: 0;
 
     @media (min-width: 992px) {
-      margin-bottom: 25%;
+      margin-top: 40%;
+      margin-bottom: 0;
     }
   }
 
@@ -272,6 +289,7 @@ Image side Text side */
   height: 100%;
   object-fit: cover;
   max-width: initial;
+  width: 100%;
 }
 
 .fullWidthImage__pattern {
@@ -893,12 +911,25 @@ Voucher */
   background: var(--color-green);
 }
 
+.voucher__container {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+
+  @media (min-width: 1440px) {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
 .voucher__background-imageGroup {
   height: 50vh;
   width: 100vw;
 
   @media (min-width: 768px) {
-    height: auto;
+    height: 100%;
+    width: 100%;
   }
 
   :is(img) {

@@ -9,8 +9,6 @@ export function splitText(text: HTMLElement) {
   const parentSection = text.closest('section')
   let titleAnim: gsap.core.Timeline
 
-  console.log(parentSection)
-
   // just on dekstop
   mm.add('(min-width: 992px)', () => {
     setup()

@@ -5,12 +5,13 @@
     $button = get_sub_field('button');
 @endphp
 
-<section class="hero__page-header">
+<section class="hero__page-header" data-module="hero-page-header">
     @if ($image)
-    <div class="hero__page-header-image" >
+    <div class="hero__page-header-image js-image-group" >
         @component('components.image', [
         'image' => $image,
-        'lazyload' => true
+        'lazyload' => true,
+        'classes' => 'js-image'
         ])
         @endcomponent
     </div>
@@ -20,13 +21,13 @@
     <div class="hero__page-header-content">
 
         @if ($title)
-        <h1 class='hero__page-header-title headline'>
+        <h1 class='hero__page-header-title headline js-title'>
           {{ $title }}
         </h1>
       @endif
 
         @if ($description)
-        <p class='hero__page-header-description'>
+        <p class='hero__page-header-description js-desc'>
           {{ $description }}
         </p>
       @endif
@@ -35,7 +36,7 @@
       <div class='hero__page-header-buttonGroup'>
         @component('components.button', [
           'button' => $button,
-          'classes' => 'hero__main-button btn--transparent'
+          'classes' => 'hero__main-button btn--transparent js-button'
         ])
         @endcomponent
       </div>

@@ -45,16 +45,6 @@
   overflow: hidden;
 }
 
-.footer__gallery-inner {
-  display: flex;
-  gap: 1.5rem;
-  width: 135%;
-
-  .swiper-slide {
-    max-height: 55rem;
-  }
-}
-
 .footer {
   background: var(--color-dark);
 }

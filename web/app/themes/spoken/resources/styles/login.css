@@ -9,6 +9,10 @@
 /* WP Login Screens */
 
 .welcome-panel-header-image {
+  background: transparent;
+}
+
+.welcome-panel-content {
   background: var(--color-green);
 }
 
