@@ -1,11 +1,15 @@
 .hero__main {
   background: var(--color-black);
-  height: 100vh;
+  height: 120vh;
   position: relative;
   display: flex;
   align-items: flex-end;
   justify-content: center;
   flex-direction: row;
+
+  @media (min-width: 768px) {
+    height: 100vh;
+  }
 }
 
 .page-builder .hero__main {
@@ -72,7 +76,11 @@
 .hero__main-embed {
   background: #ffffff30;
   backdrop-filter: blur(8px);
-  margin-bottom: 2rem;
+  margin-bottom: 0;
+
+  @media (min-width: 768px) {
+    margin-bottom: 2rem;
+  }
 }
 
 /* Hero Page Header */

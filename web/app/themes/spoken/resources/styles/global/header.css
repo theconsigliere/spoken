@@ -351,10 +351,14 @@ a.announcementBar__link {
 }
 
 .mobileHeader__logo {
-  width: 17.5rem;
+  width: 13.5rem;
   height: auto;
   margin: 0;
   display: block;
+
+  @media (min-width: 992px) {
+    width: 17.5rem;
+  }
 
   :is(img),
   :is(svg) {

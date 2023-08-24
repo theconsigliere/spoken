@@ -1,9 +1,12 @@
+@import url('https://use.typekit.net/izs8rsr.css');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+
 :root {
   /* --font-body: 'Circular Std';
     --font-headline: 'PP Formula Condensed'; */
   --font-body: 'Cormorant Garamond', serif;
-  --font-headline: 'Mendl Sans Dusk', sans-serif;
-  --font-alt-headline: 'Mendl Sans Dawn', sans-serif;
+  --font-headline: 'mendl-sans-dusk', sans-serif;
+  --font-alt-headline: 'mendl-sans-dawn', sans-serif;
   --font-cursive: 'DM Serif Display', serif;
   --font-weight-light: 300;
   --font-weight-mid: 500;
@@ -34,6 +37,3 @@
 .dusk {
   color: var(--color-dusk);
 }
-
-@import url('https://use.typekit.net/izs8rsr.css');
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
