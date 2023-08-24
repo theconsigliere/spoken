@@ -4,7 +4,7 @@
 :root {
   /* --font-body: 'Circular Std';
     --font-headline: 'PP Formula Condensed'; */
-  --font-body: 'Cormorant Garamond', serif;
+  --font-body: 'cormorant-garamond', serif;
   --font-headline: 'mendl-sans-dusk', sans-serif;
   --font-alt-headline: 'mendl-sans-dawn', sans-serif;
   --font-cursive: 'DM Serif Display', serif;

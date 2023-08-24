@@ -631,10 +631,17 @@ table td {
   }
 }
 
-.swiper-button-next,
-.swiper-button-prev {
-  &::after {
-    color: var(--color-dusk);
+.swiper {
+  .swiper-button-next,
+  .swiper-button-prev {
+    &::after {
+      color: var(--color-dusk);
+      font-size: 2.25rem;
+
+      @media (min-width: 992px) {
+        font-size: 4.5rem;
+      }
+    }
   }
 }
 
