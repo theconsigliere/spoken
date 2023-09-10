@@ -140,13 +140,13 @@
 .footer__copyright {
   grid-column: 1 / span 12;
   font-family: var(--font-headline);
-  font-size: 0.75rem;
+  font-size: 1.25rem;
   color: var(--color-grey);
   text-align: center;
 
   :is(a) {
     font-family: var(--font-headline);
-    font-size: 0.75rem;
+    font-size: 1.25rem;
     color: var(--color-grey);
     transition: color 0.3s ease-in-out;
 

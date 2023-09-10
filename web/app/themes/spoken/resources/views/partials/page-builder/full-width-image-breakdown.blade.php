@@ -8,7 +8,7 @@
 
 
 
-<div class="fullWidthImageBreakdown">
+<div class="fullWidthImageBreakdown" data-header-state='normal'>
     @if ($selectBreakdown === 'show')    
         <div class="breakdown" style="background: {{ $backgroundColour }}">
             <div class="container">

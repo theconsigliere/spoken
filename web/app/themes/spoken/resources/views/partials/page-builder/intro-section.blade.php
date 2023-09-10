@@ -5,7 +5,7 @@
   $button = get_sub_field('button');
 @endphp
 
-<section class="introSection">
+<section class="introSection" data-header-state='normal'>
 
   <div class="container">
 

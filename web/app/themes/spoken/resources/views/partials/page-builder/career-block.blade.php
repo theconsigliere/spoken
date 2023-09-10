@@ -4,7 +4,7 @@
     $postType = get_sub_field('post_type');
 @endphp
 
-<div class="career">
+<div class="career" data-header-state='normal'>
     <div class="container">
         <div class="career__content">
             @if ($title)

@@ -71,12 +71,13 @@
             @if ($footer['map_image'])
 
                 <div class="footer__main-mapGroup">
-                    @component('components.image', [
+                    {!! $footer['map_image'] !!}
+                    {{-- @component('components.image', [
                         'image' => $footer['map_image'],
                         'lazyload' => true,
                         'classes' => 'footer__main-map'
                         ])
-                    @endcomponent
+                    @endcomponent --}}
                 </div>
                                   
             @endif

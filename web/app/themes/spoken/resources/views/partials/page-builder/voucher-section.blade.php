@@ -31,7 +31,7 @@
                 @endif
     
                 @if ($image)
-                    <div class="voucher__content__imageGroup">
+                    <div class="voucher__content__imageGroup" data-header-state='normal'>
                         @component('components.image', 
                         ['image' => $image, 
                         'class' => 'voucher__content__image'])

@@ -8,7 +8,7 @@
 {{-- Pulls opening itmes & contact details from app.php --}}
 
 
-<div class="contact">
+<div class="contact" data-header-state='normal'>
     <div class="contact__inner">
         <div class="contact__item">
 

@@ -17,7 +17,7 @@
 
 
 
-<section class="workWithUs">
+<section class="workWithUs" data-header-state='normal'>
     <div class="workWithUs__pattern workWithUs__pattern--top">
         @svg('svg.green-dot-pattern')
     </div>

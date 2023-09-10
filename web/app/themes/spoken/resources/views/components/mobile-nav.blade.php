@@ -23,7 +23,7 @@ Example usage
               <li class="{{ $classes }}-nav__item js-nav-item">
                 <div class="{{ $classes }}-nav__item-inner">
             
-                  <a href="{{ $menu_item['url'] }}" target="{{ $menu_item['target'] }}" class="nav__link">{{ $menu_item['title'] }}</a> 
+                  <a href="{{ $menu_item['url'] }}" target="{{ $menu_item['target'] }}" class="nav__link h4">{{ $menu_item['title'] }}</a> 
         
                 </div>
     

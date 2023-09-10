@@ -5,7 +5,7 @@
     $button = get_sub_field('button');
 @endphp
 
-<section class="hero__page-header" data-module="hero-page-header">
+<section class="hero__page-header" data-module="hero-page-header" data-header-state='transparent'>
     @if ($image)
     <div class="hero__page-header-image js-image-group" >
         @component('components.image', [

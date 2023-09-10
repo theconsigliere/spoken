@@ -6,7 +6,7 @@
 @endphp
 
 
-<div class="galleryTextSection">
+<div class="galleryTextSection" data-header-state='normal'>
     <div class="container galleryTextSection__content">
         <div class="galleryTextSection__text-section">
           @if ($title)

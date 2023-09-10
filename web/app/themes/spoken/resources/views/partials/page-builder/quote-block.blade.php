@@ -3,7 +3,7 @@
     $backgroundColour = get_sub_field('background_colour');
 @endphp
 
-<section class="quoteSection" style="background: {{ $backgroundColour }}">
+<section class="quoteSection" style="background: {{ $backgroundColour }}" data-header-state='normal'>
     <div class="quoteSection__inner">
             <div class="quoteSection__quote">
                 @if ($quote)

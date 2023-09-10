@@ -7,7 +7,7 @@
 @endphp
 
 
-<section class="hero__main" data-module='hero-main'>
+<section class="hero__main" data-module='hero-main' data-header-state='transparent'>
 
   @if ($image)
   <div class="hero__main-image js-image-group" data-parallax-media>

@@ -55,11 +55,11 @@ li {
 
   @media (min-width: 1440px) {
     margin-bottom: 1.75rem;
-    font-size: 1.45rem;
+    font-size: 1.65rem;
   }
 
   @media (min-width: 1920px) {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
   }
 
   &.sub-headline {
@@ -75,11 +75,11 @@ li {
 
     @media (min-width: 1440px) {
       margin-bottom: 1.75rem;
-      font-size: 1.35rem;
+      font-size: 1.5rem;
     }
 
     @media (min-width: 1920px) {
-      font-size: 1.5rem;
+      font-size: 1.6rem;
     }
   }
 }

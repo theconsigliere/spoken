@@ -4,7 +4,7 @@
 
 @endphp
 
-<div class="menu">
+<div class="menu" data-header-state='normal'>
     <div class="menu__content">
         @if ($title)
             <div class="menu__titleGroup">

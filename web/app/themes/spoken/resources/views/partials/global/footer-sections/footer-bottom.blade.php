@@ -58,7 +58,7 @@
 
     <div class="container">
         <p class="footer__copyright">
-          {{ $siteName }} All Rights Reserved {{ $date }}. <a href="https://maxwellkirwin.co.uk" target="new">Website developed by Maxwell Kirwin</a>
+          {{ $siteName }} All Rights Reserved {{ $date }}. Website designed by Simon Bradshaw <a href="https://maxwellkirwin.co.uk" target="new">+ developed by Maxwell Kirwin</a>
         </p>
     </div>
 </div>

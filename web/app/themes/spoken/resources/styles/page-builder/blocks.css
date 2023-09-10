@@ -51,17 +51,39 @@
 .introSection__text-content-button,
 .galleryTextSection__button {
   margin-top: 2rem;
-  margin-left: 2px;
+  margin-left: auto;
+  margin-right: auto;
 
   @media (min-width: 992px) {
     margin-top: 0;
-    margin-left: 5%;
+    margin-left: 0;
+    margin-right: 0;
   }
+}
+
+.galleryTextSection__paragraph,
+.galleryTextSection__title,
+.breakdown__title {
+  text-align: center;
+
+  @media (min-width: 992px) {
+    text-align: left;
+  }
+}
+
+.galleryTextSection__text-button,
+.galleryTextSection__title-section {
+  width: 100%;
 }
 
 .introSection__text-content-paragraph {
   text-wrap: balance;
   margin-left: 0;
+  text-align: center;
+
+  @media (min-width: 992px) {
+    text-align: left;
+  }
 
   @media (min-width: 1200px) {
     max-width: 80%;
@@ -205,11 +227,11 @@ Image side Text side */
 
 .imageSideTextSide__pattern {
   width: 100%;
-  height: 2.5rem;
+  height: 5rem;
   overflow: hidden;
 
-  @media (min-width: 768px) {
-    height: 5rem;
+  @media (min-width: 992px) {
+    height: 8.5rem;
   }
 
   :is(svg) {
@@ -283,8 +305,14 @@ Image side Text side */
 }
 
 .breakdown__paragraph {
-  margin-bottom: 0;
   width: 90%;
+  margin: 0 auto;
+  text-align: center;
+
+  @media (min-width: 992px) {
+    margin: 0;
+    text-align: left;
+  }
 }
 
 .fullWidthImage {
