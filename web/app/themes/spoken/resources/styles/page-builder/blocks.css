@@ -56,7 +56,7 @@
 
   @media (min-width: 992px) {
     margin-top: 0;
-    margin-left: 0;
+    margin-left: 5%;
     margin-right: 0;
   }
 }
@@ -256,6 +256,10 @@ Image side Text side */
     @media (min-width: 992px) {
       margin-top: 40%;
       margin-bottom: 0;
+    }
+
+    @media (min-width: 1200px) {
+      margin-top: 30%;
     }
   }
 
@@ -485,6 +489,7 @@ Gallery Text Section */
 
   @media (min-width: 992px) {
     line-height: 1.5;
+    max-width: 45ch;
   }
 }
 
@@ -1131,11 +1136,20 @@ Voucher */
 
 .subscribe__embed {
   #mc_embed_signup {
-    max-width: 97.5%;
+    width: 97.5%;
     margin: 0 auto;
 
     @media (min-width: 768px) {
-      max-width: 90%;
+      width: 90%;
     }
   }
+}
+
+#mergeRow-gdpr summary {
+  text-transform: uppercase;
+  cursor: pointer;
+  font-family: var(--font-headline);
+  text-transform: uppercase;
+  font-weight: var(--font-weight-mid);
+  font-size: 1.35rem;
 }

@@ -11,8 +11,10 @@ export function splitText(text: HTMLElement) {
 
   // just on dekstop
   mm.add('(min-width: 992px)', () => {
-    setup()
-    runTextAnim()
+    setTimeout(() => {
+      setup()
+      runTextAnim()
+    }, 2500)
   })
 
   mm.add('(max-width: 991px)', () => {
