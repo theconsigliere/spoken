@@ -57,6 +57,14 @@
   }
 }
 
+.footer__opening-times {
+  margin-bottom: 2rem;
+}
+
+.footer__openHours-hours {
+  color: #a3a3a3;
+}
+
 .footer__main {
   background: var(--color-dark);
   padding: 10rem 0 2.5rem;
@@ -68,7 +76,7 @@
 
 .footer__main-contactDetails {
   grid-column: 5 / span 3;
-  margin-top: 2.5rem;
+  /* margin-top: 2.5rem; */
 }
 
 .footer__detail {

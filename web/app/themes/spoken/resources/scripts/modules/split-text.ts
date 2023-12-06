@@ -49,8 +49,8 @@ export function splitText(text: HTMLElement) {
     titleAnim = gsap.timeline({
       scrollTrigger: {
         trigger: parentSection,
-        start: 'top center',
-        end: 'center center',
+        start: 'top+=25% bottom',
+        end: 'center bottom',
         scrub: 1,
         invalidateOnRefresh: true
         // markers: true

@@ -35,7 +35,7 @@
         <div class="galleryTextSection__image-section">
           @if ($imageGallery)
             @foreach ($imageGallery as $key => $image)
-              <div class="galleryTextSection__imageGroup galleryTextSection__image--{{ $key }}">
+              <div class="galleryTextSection__image galleryTextSection__image--{{ $key }}">
                 @component('components.image', [
                   'image' => $image,
                   'lazyload' => true,

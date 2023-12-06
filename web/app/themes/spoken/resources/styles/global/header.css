@@ -327,6 +327,7 @@ a.announcementBar__link {
   width: 100%;
   transform: translateX(100%);
   background: var(--color-green);
+  display: block;
 
   &.js-open {
     pointer-events: all;
@@ -336,6 +337,10 @@ a.announcementBar__link {
     .mobileMenu__inner {
       transform: translateX(-0%);
     }
+  }
+
+  @media (min-width: 992px) {
+    display: none;
   }
 }
 

@@ -36,4 +36,10 @@
     font-family: var(--font-headline);
     text-decoration: none;
   }
+
+  :is(h1),
+  :is(h2),
+  :is(h3) {
+    font-size: 2.5rem !important;
+  }
 }

@@ -4,35 +4,45 @@
             @if ($openingTimes)
 
                 <div class="footer__main-opening-times">
-                    @if ($openingTimes['title'])
-                    <div class="footer__main-titleGroup">
-                        <h5 class="footer__main-title sub-headline">
-                            {{ $openingTimes['title'] }}
-                        </h5>
-                    </div>
-                    @endif
 
-                    @if ($openingTimes['add_open_hours'])
+                    @if ($openingTimes['add_hours'])
 
+                    @foreach ($openingTimes['add_hours'] as $times)
 
-                        <div class="footer__main-openHours">
-                            @foreach ($openingTimes['add_open_hours'] as $times)
-
-                                <div class="footer__hours">
-                                    @if ($times['day'])
-                                    <h6 class="footer__openHours-day sub-headline">{{ $times['day'] }}</h6>
-                                    @endif
-
-                                    @if ($times['hours'])
-                                    <p class="footer__openHours-hours sub-headline">{{ $times['hours'] }}</p>
-                                    @endif
-
-                                    <div class="footer__underline"></div>
+                        <div class="footer__opening-times">
+                            @if ($times['title'])
+                            <div class="footer__main-titleGroup">
+                                <h5 class="footer__main-title sub-headline">
+                                    {{ $times['title'] }}
+                                </h5>
+                            </div>
+                            @endif
+        
+                            @if ($times['add_open_hours'])
+                                <div class="footer__main-openHours">
+                                    @foreach ($times['add_open_hours'] as $times)
+                                        <div class="footer__hours">
+                                            @if ($times['day'])
+                                            <h6 class="footer__openHours-day sub-headline">{{ $times['day'] }}</h6>
+                                            @endif
+        
+                                            @if ($times['hours'])
+                                            <p class="footer__openHours-hours sub-headline">{{ $times['hours'] }}</p>
+                                            @endif
+        
+                                            
+                                        </div>
+                                     @endforeach
                                 </div>
-                             @endforeach
-                            
+                            @endif
+                            <div class="footer__underline"></div>
                         </div>
-                        
+                    
+                      
+                    
+                    @endforeach
+                    
+                      
                     
                     @endif
                 </div>
