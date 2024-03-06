@@ -6,8 +6,8 @@ DEVSITE="https://spoken.test"
 STAGDIR="forge@167.99.197.207:/home/forge/spoken.maxwellkirwin.co.uk/web/app/uploads/"
 STAGSITE="https://spoken.maxwellkirwin.co.uk"
 
-# PRODDIR="forge@xx.xx.xx:/home/forge/www.spokenexmouth.com/web/app/uploads/"
-# PRODSITE="http://www"
+PRODDIR="forge@167.99.197.207:/home/forge/spokenexmouth.com/web/app/uploads/"
+PRODSITE="http://spokenexmouth.com"
 
 FROM=$1
 TO=$2
