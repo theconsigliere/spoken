@@ -3,7 +3,7 @@
     $postType = get_sub_field('select_post_type');
 @endphp
 
-<section class="testimonial" data-module='testimonial-slider'>
+<section class="testimonial" data-module='testimonial-slider' data-header-state='normal'>
     <div class="container">
         <div class="testimonial__content">
 

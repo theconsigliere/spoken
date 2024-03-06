@@ -35,6 +35,7 @@ class App extends Composer
             'contactDetails' => $this->contactDetails(),
             'opentableEmbed' => $this->opentableEmbed(),
             'privacyPolicy' => $this->privacyPolicy(),
+            'getSubscribe' => $this->getSubscribe(),
         ];
     }
     
@@ -128,6 +129,10 @@ class App extends Composer
     // cookie policy
     public function privacyPolicy() {
         return get_field('privacy_policy_popup', 'options');
+    }
+
+    public function getSubscribe() {
+        return get_field('show_mailchimp_subscribe_form');
     }
     
 }

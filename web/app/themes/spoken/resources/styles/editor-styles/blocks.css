@@ -1,0 +1,18 @@
+.acfe-flexible-placeholder.-preview {
+  .hero__main-image {
+    opacity: 0.35;
+  }
+
+  .voucher__background-imageGroup {
+    width: 100%;
+  }
+
+  .voucher__content__imageGroup img {
+    width: 100%;
+    height: auto;
+  }
+
+  .introSection__title {
+    margin: 0 auto !important;
+  }
+}

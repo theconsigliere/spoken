@@ -9,12 +9,12 @@ export function splitText(text: HTMLElement) {
   const parentSection = text.closest('section')
   let titleAnim: gsap.core.Timeline
 
-  console.log(parentSection)
-
   // just on dekstop
   mm.add('(min-width: 992px)', () => {
-    setup()
-    runTextAnim()
+    setTimeout(() => {
+      setup()
+      runTextAnim()
+    }, 2500)
   })
 
   mm.add('(max-width: 991px)', () => {
@@ -49,11 +49,11 @@ export function splitText(text: HTMLElement) {
     titleAnim = gsap.timeline({
       scrollTrigger: {
         trigger: parentSection,
-        start: 'top center',
-        end: 'center center',
+        start: 'top+=25% bottom',
+        end: 'center bottom',
         scrub: 1,
-        invalidateOnRefresh: true,
-        markers: true
+        invalidateOnRefresh: true
+        // markers: true
       },
       defaults: {
         stagger: 0.15,

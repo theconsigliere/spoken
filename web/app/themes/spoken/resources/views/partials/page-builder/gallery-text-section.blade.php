@@ -6,7 +6,7 @@
 @endphp
 
 
-<div class="galleryTextSection">
+<div class="galleryTextSection" data-header-state='normal'>
     <div class="container galleryTextSection__content">
         <div class="galleryTextSection__text-section">
           @if ($title)
@@ -35,7 +35,7 @@
         <div class="galleryTextSection__image-section">
           @if ($imageGallery)
             @foreach ($imageGallery as $key => $image)
-              <div class="galleryTextSection__imageGroup galleryTextSection__image--{{ $key }}">
+              <div class="galleryTextSection__image galleryTextSection__image--{{ $key }}">
                 @component('components.image', [
                   'image' => $image,
                   'lazyload' => true,

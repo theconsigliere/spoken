@@ -17,7 +17,7 @@
 
 
 
-<section class="workWithUs">
+<section class="workWithUs" data-header-state='normal'>
     <div class="workWithUs__pattern workWithUs__pattern--top">
         @svg('svg.green-dot-pattern')
     </div>
@@ -26,7 +26,7 @@
         <div class="workWithUs__content">
 
             @if ($title)
-              <h3 class='workWithUs__title headline h5'>
+              <h3 class='workWithUs__title headline'>
                 {{ $title }}
               </h3>
             @endif

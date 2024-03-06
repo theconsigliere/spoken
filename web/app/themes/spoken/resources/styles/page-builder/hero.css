@@ -1,11 +1,15 @@
 .hero__main {
   background: var(--color-black);
-  height: 100vh;
+  height: 120vh;
   position: relative;
   display: flex;
   align-items: flex-end;
   justify-content: center;
   flex-direction: row;
+
+  @media (min-width: 768px) {
+    height: 100vh;
+  }
 }
 
 .page-builder .hero__main {
@@ -43,6 +47,7 @@
   text-transform: uppercase;
   letter-spacing: 0.5rem;
   text-align: center;
+  font-family: var(--font-alt-headline);
 }
 
 .hero__main-span {
@@ -51,6 +56,9 @@
 
 .hero__main-description {
   color: var(--color-white);
+  text-wrap: balance;
+  max-width: 95%;
+  text-align: center;
 }
 
 .hero__main-titleSection {
@@ -68,7 +76,11 @@
 .hero__main-embed {
   background: #ffffff30;
   backdrop-filter: blur(8px);
-  margin-bottom: 2rem;
+  margin-bottom: 0;
+
+  @media (min-width: 768px) {
+    margin-bottom: 2rem;
+  }
 }
 
 /* Hero Page Header */
@@ -77,6 +89,7 @@
   background: var(--color-black);
   height: 60vh;
   position: relative;
+  overflow: hidden;
 }
 
 .hero__page-header-image {
@@ -110,6 +123,7 @@
 }
 
 .hero__page-header-description {
+  text-align: center;
 }
 
 .hero__page-header-buttonGroup {

@@ -7,14 +7,9 @@
 
 export const modules: Module[] = [
   {
-    selector: '[data-module="carousel"]',
-    exportedFunction: 'carousel',
-    fileName: 'carousel'
-  },
-  {
-    selector: '[data-module="modal"]',
-    exportedFunction: 'modal',
-    fileName: 'modal'
+    selector: '[data-module="voucher"]',
+    exportedFunction: 'voucher',
+    fileName: 'voucher'
   },
   {
     selector: '[data-module="testimonial-slider"]',
@@ -30,6 +25,16 @@ export const modules: Module[] = [
     selector: '[data-module="split-text"]',
     exportedFunction: 'splitText',
     fileName: 'split-text'
+  },
+  {
+    selector: '[data-module="hero-main"]',
+    exportedFunction: 'heroMain',
+    fileName: 'hero-main'
+  },
+  {
+    selector: '[data-module="hero-page-header"]',
+    exportedFunction: 'heroPageHeader',
+    fileName: 'hero-page-header'
   }
 ]
 

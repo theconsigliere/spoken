@@ -14,22 +14,25 @@ Example usage
   $classes = isset($classes) ? $lazyload . " " . $classes : $lazyload;
 @endphp
 
-@if ($lazyload)
+@if (!$lazyload || is_admin())
+  <img
+      alt="{{ $image['alt'] ?? '' }}"
+      sizes="{{ $sizes }}"
+      src="{{ $image['sizes']['large'] ?? null }}" 
+      srcset="{{ isset($image['id']) ? wp_get_attachment_image_srcset($image['id'], 'large') : null }}" 
+      class="{{ $classes }}"
+      width="{{ $image['width'] }}"
+      height="{{ $image['height'] }}"
+  >
+@else
+
+{{-- Lazyload --}}
   <img
     alt="{{ $image['alt'] ?? '' }}"
+    loading=”lazy”
     data-sizes="{{ $sizes }}"
     data-src="{{ $image['sizes']['large'] ?? null }}" 
     data-srcset="{{ isset($image['id']) ? wp_get_attachment_image_srcset($image['id'], 'large') : null }}" 
-    class="{{ $classes }}"
-    width="{{ $image['width'] }}"
-    height="{{ $image['height'] }}"
-  >
-@else
-  <img
-    alt="{{ $image['alt'] ?? '' }}"
-    sizes="{{ $sizes }}"
-    src="{{ $image['sizes']['large'] ?? null }}" 
-    srcset="{{ isset($image['id']) ? wp_get_attachment_image_srcset($image['id'], 'large') : null }}" 
     class="{{ $classes }}"
     width="{{ $image['width'] }}"
     height="{{ $image['height'] }}"

@@ -18,9 +18,14 @@ export function preloader(app: HTMLElement | null) {
   const preloaderTl = gsap.timeline({
     onComplete: () => {
       const preloaderOut = gsap.timeline({
+        onStart: () => {
+          // notifies hero-main.ts that preloader has run and animation can start half way through preloader out timeline
+          setTimeout(() => {
+            window.dispatchEvent(preloaderEvent)
+          }, 1000)
+        },
         onComplete: () => {
           preloader.remove()
-          window.dispatchEvent(preloaderEvent)
         }
       })
 

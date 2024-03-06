@@ -7,10 +7,11 @@
 @endphp
 
 
-<div class="voucher">
+<div class="voucher" data-module="voucher">
 
+  <div class="voucher__container">
     @if ($backgroundImage)
-    <div class="voucher__background-imageGroup">
+    <div class="voucher__background-imageGroup js-image-group">
         @component('components.image', 
         ['image' => $backgroundImage, 
         'class' => 'voucher__background-image'])
@@ -30,7 +31,7 @@
                 @endif
     
                 @if ($image)
-                    <div class="voucher__content__imageGroup">
+                    <div class="voucher__content__imageGroup" data-header-state='normal'>
                         @component('components.image', 
                         ['image' => $image, 
                         'class' => 'voucher__content__image'])
@@ -76,5 +77,6 @@
         </div>
     </div>
 
+  </div>
 
 </div>

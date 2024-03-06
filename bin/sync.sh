@@ -3,11 +3,11 @@
 DEVDIR="web/app/uploads/"
 DEVSITE="https://spoken.test"
 
-STAGDIR="forge@142.93.43.90:/home/forge/spoken.maxwellkirwin.co.uk/web/app/uploads/"
+STAGDIR="forge@167.99.197.207:/home/forge/spoken.maxwellkirwin.co.uk/web/app/uploads/"
 STAGSITE="https://spoken.maxwellkirwin.co.uk"
 
-PRODDIR="forge@xx.xx.xx:/home/forge/www.spokenexmouth.com/web/app/uploads/"
-PRODSITE="http://www"
+# PRODDIR="forge@xx.xx.xx:/home/forge/www.spokenexmouth.com/web/app/uploads/"
+# PRODSITE="http://www"
 
 FROM=$1
 TO=$2

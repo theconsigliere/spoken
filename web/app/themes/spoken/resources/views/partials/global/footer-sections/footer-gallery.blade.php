@@ -15,6 +15,19 @@
         
         </div>
         @endforeach
+
+        @foreach ($footer['footer_gallery'] as $key => $image)
+        <div class="swiper-slide">
+        
+            @component('components.image', [
+              'image' => $image,
+              'lazyload' => true,
+              'classes' => 'footerGallery__image'
+            ])
+            @endcomponent
+        
+        </div>
+        @endforeach
       </div>
     </div>
       @endif

@@ -5,17 +5,18 @@
   $button = get_sub_field('button');
 @endphp
 
-<section class="introSection">
+<section class="introSection" data-header-state='normal'>
 
   <div class="container">
 
     <div class="introSection__inner">
 
-      <div class="introSection__spoken-circle">
-        <div class="introSection__spoken-circle--circle">
-          @svg('svg.spoken-circle')
-        </div>
-      </div>
+      @component('components.logo-spinner', [
+        'size' => 'medium',
+        'classes' => 'introSection',
+        'color' => 'white'
+    ])
+    @endcomponent
 
 
       @if ($title)

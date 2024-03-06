@@ -10,7 +10,7 @@ $title = get_sub_field('title');
 @endphp
 
 
-<div class="imageSideTextSide imageSideTextSide--{{ $imagePosition }}" style="background: {{ $backgroundColour }}">
+<div class="imageSideTextSide imageSideTextSide--{{ $imagePosition }}" style="background: {{ $backgroundColour }}" data-header-state='normal'>
     <div class="imageSideTextSide__image">
        <div class="imageSideTextSide__image--{{ $cropImage }}">
         @component('components.image', [

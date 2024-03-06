@@ -141,3 +141,8 @@ add_action('init', function () {
     remove_action('wp_body_open', 'wp_global_styles_render_svg_filters');
     remove_action('wp_footer', 'wp_enqueue_global_styles', 1);
 });
+
+
+add_action('wp_dashboard_setup', function () {
+   remove_action('welcome_panel','wp_welcome_panel'); // WP Welcome
+});

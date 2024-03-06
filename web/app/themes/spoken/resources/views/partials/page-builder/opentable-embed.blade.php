@@ -3,7 +3,7 @@
 @endphp
 
 
-<div class="opentableEmbed">
+<div class="opentableEmbed" data-header-state='normal'>
     <div class="container">
         <div class="opentableEmbed__inner">
             {!! $opentableEmbed['embed'] !!}

@@ -45,12 +45,6 @@
   overflow: hidden;
 }
 
-.footer__gallery-inner {
-  display: flex;
-  gap: 1.5rem;
-  width: 135%;
-}
-
 .footer {
   background: var(--color-dark);
 }
@@ -61,6 +55,14 @@
     height: 100%;
     object-fit: cover;
   }
+}
+
+.footer__opening-times {
+  margin-bottom: 2rem;
+}
+
+.footer__openHours-hours {
+  color: #a3a3a3;
 }
 
 .footer__main {
@@ -74,6 +76,7 @@
 
 .footer__main-contactDetails {
   grid-column: 5 / span 3;
+  /* margin-top: 2.5rem; */
 }
 
 .footer__detail {
@@ -118,6 +121,11 @@
 
 .footer__main-mapGroup {
   grid-column: 8 / span 5;
+  margin-top: 2rem;
+
+  @media (min-width: 992px) {
+    margin-top: 0;
+  }
 
   :is(img) {
     width: 100%;
@@ -140,13 +148,13 @@
 .footer__copyright {
   grid-column: 1 / span 12;
   font-family: var(--font-headline);
-  font-size: 0.75rem;
+  font-size: 1.25rem;
   color: var(--color-grey);
   text-align: center;
 
   :is(a) {
     font-family: var(--font-headline);
-    font-size: 0.75rem;
+    font-size: 1.25rem;
     color: var(--color-grey);
     transition: color 0.3s ease-in-out;
 
@@ -160,9 +168,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+
+  @media (min-width: 992px) {
+    flex-direction: row;
+  }
 }
 
 .footer__bottom-logoGroup {
+  margin: 2rem 0;
+
+  @media (min-width: 1920px) {
+    margin: 0;
+  }
 }
 
 .footer__bottom-links {
@@ -175,6 +193,11 @@
   flex: 1;
   display: flex;
   justify-content: flex-start;
+  margin-bottom: 2rem;
+
+  @media (min-width: 992px) {
+    margin-bottom: 0;
+  }
 }
 
 .footer__bottom-link {

@@ -7,7 +7,6 @@ export function headerMobile(el: HTMLElement) {
   const mobileLogo = document.querySelector('.js-logo') as HTMLElement
   const dropdowns = [...Array.from(mobileMenu.querySelectorAll('.js-mobile-dropdown'))] as HTMLElement[]
   const subMenus = [...Array.from(mobileMenu.querySelectorAll('.js-mobile-submenu'))] as HTMLElement[]
-  const underlines = [...Array.from(mobileMenu.querySelectorAll('.js-underline'))] as HTMLElement[]
   const navItems = [...Array.from(mobileMenu.querySelectorAll('.js-nav-item'))] as HTMLElement[]
   const body = document.querySelector('body') as HTMLElement
 
@@ -16,12 +15,10 @@ export function headerMobile(el: HTMLElement) {
   const animationTl = gsap.timeline({
     onComplete: () => {
       navIcon.disabled = false
-      gsap.set(underlines, { clearProps: 'all' })
       gsap.set(navItems, { clearProps: 'all' })
     }
   })
 
-  gsap.set(underlines, { xPercent: -100 })
   gsap.set(navItems, { yPercent: 25, autoAlpha: 0 })
 
   // remove all mobile menu classes on resize
@@ -34,15 +31,12 @@ export function headerMobile(el: HTMLElement) {
   function removeMobileMenu() {
     window.lenis ? window.lenis.start() : (body.style.overflow = 'auto')
 
-    animationTl
-      .fromTo(
-        navItems,
-        { yPercent: 0, autoAlpha: 1 },
-        { duration: 0.15, autoAlpha: 0, yPercent: 25, stagger: 0.1, ease: 'power2.out' }
-      )
-      .fromTo(underlines, { xPercent: 0 }, { duration: 0.15, xPercent: -100, stagger: 0.1, ease: 'power2.out' }, 0)
+    animationTl.fromTo(
+      navItems,
+      { yPercent: 0, autoAlpha: 1 },
+      { duration: 0.15, autoAlpha: 0, yPercent: 25, stagger: 0.1, ease: 'power2.out' }
+    )
 
-    mobileLogo.classList.remove('js-active')
     if (headerState) el.setAttribute('data-state', headerState)
     headerState = null
 
@@ -65,20 +59,13 @@ export function headerMobile(el: HTMLElement) {
       window.lenis ? window.lenis.stop() : (body.style.overflow = 'hidden')
       headerState = el.getAttribute('data-state')
       el.setAttribute('data-state', 'transparent')
-      mobileLogo.classList.add('js-active')
 
-      animationTl
-        .fromTo(
-          underlines,
-          { xPercent: -100 },
-          { delay: 0.5, duration: 0.25, xPercent: 0, stagger: 0.1, ease: 'power2.out' }
-        )
-        .fromTo(
-          navItems,
-          { yPercent: 25, autoAlpha: 0 },
-          { delay: 0.3, duration: 0.35, autoAlpha: 1, yPercent: 0, stagger: 0.1, ease: 'expo.out' },
-          0
-        )
+      animationTl.fromTo(
+        navItems,
+        { yPercent: 25, autoAlpha: 0 },
+        { delay: 0.3, duration: 0.35, autoAlpha: 1, yPercent: 0, stagger: 0.1, ease: 'expo.out' },
+        0
+      )
     } else {
       //close
       removeMobileMenu()
