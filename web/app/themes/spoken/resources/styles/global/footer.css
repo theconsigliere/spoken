@@ -127,10 +127,16 @@
     margin-top: 0;
   }
 
-  :is(img) {
+  :is(img),
+  :is(iframe) {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    min-height: 45dvh;
+
+    @media (min-width: 768px) {
+      min-height: 100%;
+    }
   }
 }
 

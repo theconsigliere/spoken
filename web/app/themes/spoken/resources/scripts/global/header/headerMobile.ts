@@ -1,4 +1,4 @@
-import { gsap } from 'gsap/all'
+import { gsap } from 'gsap'
 
 export function headerMobile(el: HTMLElement) {
   let mm = gsap.matchMedia()
@@ -12,62 +12,73 @@ export function headerMobile(el: HTMLElement) {
 
   let headerState: string | null = null
 
-  const animationTl = gsap.timeline({
-    onComplete: () => {
-      navIcon.disabled = false
-      gsap.set(navItems, { clearProps: 'all' })
-    }
-  })
+  if (navItems) gsap.set(navItems, { autoAlpha: 0 })
 
-  gsap.set(navItems, { yPercent: 25, autoAlpha: 0 })
+  // if (navIcon) {
+  //     animationTl = gsap.timeline({
+  //         onComplete: () => {
+  //             navIcon.disabled = false
+  //             if (navItems) gsap.set(navItems, { clearProps: 'all' })
+  //         }
+  //     })
+
+  //     if (navItems) gsap.set(navItems, { yPercent: 25, autoAlpha: 0 })
+  // }
 
   // remove all mobile menu classes on resize
   mm.add('(min-width: 992px)', () => {
-    navIcon.classList.remove('js-active')
-    mobileMenu.classList.remove('js-open')
-    removeMobileMenu()
+    if (navIcon) navIcon.classList.remove('js-active')
+    if (mobileMenu) mobileMenu.classList.remove('js-open')
+    if (navIcon) removeMobileMenu()
+  })
+
+  mm.add('(max-width: 991px)', () => {
+    //mobile
   })
 
   function removeMobileMenu() {
     window.lenis ? window.lenis.start() : (body.style.overflow = 'auto')
 
-    animationTl.fromTo(
-      navItems,
-      { yPercent: 0, autoAlpha: 1 },
-      { duration: 0.15, autoAlpha: 0, yPercent: 25, stagger: 0.1, ease: 'power2.out' }
-    )
+    if (navItems) {
+      gsap.to(navItems, { duration: 0.1, autoAlpha: 0, stagger: 0.1, ease: 'expo.out' })
+    }
 
     if (headerState) el.setAttribute('data-state', headerState)
     headerState = null
 
-    dropdowns.forEach(dropdown => {
-      dropdown.classList.remove('js-open')
-    })
+    if (dropdowns)
+      dropdowns.forEach(dropdown => {
+        dropdown.classList.remove('js-open')
+      })
 
-    subMenus.forEach(submenu => {
-      submenu.style.height = '0px'
-    })
+    if (subMenus)
+      subMenus.forEach(submenu => {
+        submenu.style.height = '0px'
+      })
   }
 
   function openMobileMenu() {
     navIcon.classList.toggle('js-active')
     mobileMenu.classList.toggle('js-open')
-    navIcon.disabled = true
+
+    // navIcon.disabled = true
 
     if (mobileMenu.classList.contains('js-open')) {
       //open
       window.lenis ? window.lenis.stop() : (body.style.overflow = 'hidden')
       headerState = el.getAttribute('data-state')
-      el.setAttribute('data-state', 'transparent')
+      el.setAttribute('data-state', 'normal')
 
-      animationTl.fromTo(
-        navItems,
-        { yPercent: 25, autoAlpha: 0 },
-        { delay: 0.3, duration: 0.35, autoAlpha: 1, yPercent: 0, stagger: 0.1, ease: 'expo.out' },
-        0
-      )
+      console.log('open menu')
+      gsap.to(navItems, {
+        duration: 0.6,
+        autoAlpha: 1,
+        stagger: 0.05,
+        ease: 'expo.in'
+      })
     } else {
       //close
+      console.log('close menu')
       removeMobileMenu()
     }
   }
@@ -112,9 +123,11 @@ export function headerMobile(el: HTMLElement) {
     })
   }
 
-  navIcon.addEventListener('click', openMobileMenu)
+  if (navIcon) navIcon.addEventListener('click', openMobileMenu)
 
-  dropdowns.forEach((dropdown: HTMLElement) => {
-    dropdown.addEventListener('click', toggleDropdown)
-  })
+  if (dropdowns) {
+    dropdowns.forEach((dropdown: HTMLElement) => {
+      dropdown.addEventListener('click', toggleDropdown)
+    })
+  }
 }

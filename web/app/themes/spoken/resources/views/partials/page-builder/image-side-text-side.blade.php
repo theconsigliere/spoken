@@ -11,16 +11,18 @@ $title = get_sub_field('title');
 
 
 <div class="imageSideTextSide imageSideTextSide--{{ $imagePosition }}" style="background: {{ $backgroundColour }}" data-header-state='normal'>
+    @if ($image)
     <div class="imageSideTextSide__image">
-       <div class="imageSideTextSide__image--{{ $cropImage }}">
-        @component('components.image', [
-        'image' => $image,
-        'lazyload' => true,
-        'classes' => '',
-        ])
-        @endcomponent
-    </div>
-    </div>
+        <div class="imageSideTextSide__image--{{ $cropImage }}">
+         @component('components.image', [
+             'image' => $image,
+             'lazyload' => true,
+             'classes' => '',
+         ])
+         @endcomponent
+         </div>
+     </div>
+    @endif
     <div class="imageSideTextSide__text">
         <div class="imageSideTextSide__text-inner">
                 <div class="imageSideTextSide__text-content">
