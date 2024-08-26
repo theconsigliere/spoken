@@ -171,6 +171,7 @@ Image side Text side */
   display: flex;
   min-height: 75vh;
   overflow: hidden;
+  justify-content: center;
 }
 
 .imageSideTextSide--left {
@@ -457,7 +458,7 @@ Gallery Text Section */
 
 .galleryTextSection__image {
   aspect-ratio: 1/1;
-  border: 5px solid var(--color-white);
+  border: 3px solid var(--color-white);
   width: 40%;
 
   @media (min-width: 768px) {
